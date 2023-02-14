@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+    <title>Mainpage</title>
+</head>
+<body>
+    <div>
+        <h1>Добро пожаловать на ваш лист задач, добавьте новую задачу или посмотрите старую!</h1>
+        <a href="/article/add">Добавить новую задачу</a>
+        <div>
+            {% for article in articles %}
+            <h2>{{ article.description }}</h2>
+            <h2>{{ article.date }}</h2>
+            <p>
+                <a href="/article/?pk={{ article.pk }}">Подробнее о задаче..</a>
+            </p>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
