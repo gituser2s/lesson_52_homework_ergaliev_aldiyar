@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+    <title>Task Create</title>
+</head>
+<body>
+    <h1>Создать новое задание</h1>
+    <div class="form">
+        <form action="/article/add/" method="post">
+            {% csrf_token %}
+            <div class="Description-Block">
+                <label for="description">Описание</label>
+                <textarea class="textarea" name="description" id="description" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="Date-Block">
+                <label for="date">Дата</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="Status-Block">
+                <label for="status">Статус</label>
+                <select name="status" id="status" class="status_selection" required="required">
+                    <option value="New" selected>Новая</option>
+                    <option value="In progress..">В процессе</option>
+                    <option value="Done">Сделано</option>
+                </select>
+            </div>
+            <div class="sub_button">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
