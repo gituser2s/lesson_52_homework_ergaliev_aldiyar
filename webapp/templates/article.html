@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+    <title>Task</title>
+</head>
+<body>
+<div>
+    <h1>Задание</h1>
+    <p><a href="/">На главную</a></p>
+    <p>Описание: {{ article.description }}</p>
+    <p>Дата: {{ article.date }}</p>
+    <p>Статус: {{ article.status }}</p>
+</div>
+</body>
+</html>
