@@ -1,0 +1,27 @@
+body{
+    background: darkgrey;
+    text-align: center;
+}
+.Description-Block{
+    padding: 5px;
+}
+.Status-Block{
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
+    right: 63px;
+    bottom: 20px;
+}
+.Date-Block{
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
+    right: 45px;
+}
+.sub_button{
+    position: relative;
+    right: 43px;
+    bottom: 30px;
+}
+
+
